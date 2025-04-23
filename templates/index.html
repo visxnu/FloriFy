@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌸 Flower Classifier</title>
+</head>
+<body style="text-align: center; font-family: Arial;">
+    <h1>🌼 Identify the Flower Species 🌼</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>🌸 It's a {{ prediction }}!</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 300px; margin-top: 20px;">
+    {% endif %}
+</body>
+</html>
